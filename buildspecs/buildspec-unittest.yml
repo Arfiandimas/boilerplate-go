@@ -1,0 +1,29 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      golang: latest
+    commands:
+      - echo install steps...
+      - pip install --upgrade awscli
+  pre_build:
+    commands:
+      - sh deployment/deployment-dev.sh
+      - BUILD_NAME=$(echo $CODEBUILD_BUILD_ID | cut -d':' -f1)
+      - BUILD_ID=$(echo $CODEBUILD_BUILD_ID | cut -d':' -f2)
+      - BUILD_URL=$(echo "https://$AWS_DEFAULT_REGION.console.aws.amazon.com/codesuite/codebuild/projects/$BUILD_NAME/build/$BUILD_NAME%3A$BUILD_ID")
+  build:
+    commands:
+      - echo "Running Unittest"
+      - go test ./src/app/... -coverprofile=coverage.out
+  post_build:
+    commands:
+      - |
+        if [ $CODEBUILD_BUILD_SUCCEEDING = 1 ]; then
+          aws codecommit update-pull-request-approval-state --pull-request-id $PULL_REQUEST_ID --approval-state APPROVE --revision-id $REVISION_ID;
+          content="✔️  Unittest SUCCESS passed! ![View Build]($BUILD_URL)"
+        else
+          content="❌ Unittest FAILED not passed ![View Build]($BUILD_URL)"
+        fi
+      - aws codecommit post-comment-for-pull-request --pull-request-id $PULL_REQUEST_ID --repository-name $REPOSITORY_NAME --before-commit-id $BEFORE_COMMIT --after-commit-id $AFTER_COMMIT --content "$content"
+      

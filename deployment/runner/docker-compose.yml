@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+    {{PROJECT_NAME}}:
+        image: docker.pkg.github.com/kiriminaja/kaj-rest-engine-go/{{PROJECT_NAME}}:latest
+        restart: always
+        expose:
+            - "8081"
+        volumes:
+            - type: bind
+              source: ./environment/{{PROJECT_NAME}}/.env
+              target: /opt/{{PROJECT_NAME}}/.env
+              read_only: true

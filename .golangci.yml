@@ -1,0 +1,27 @@
+run:
+  concurrency: 4
+  timeout: 5m
+  issues-exit-code: 2
+  tests: false
+  build-tags:
+    - mytag
+  skip-dirs:
+    - src/pkg/*
+    - src/server
+    - src/handler
+    - tmp
+    - buildspecs
+    - config
+    - database
+    - deployment
+  skip-dirs-use-default: true
+  skip-files:
+    - ".*\\.my\\.go$"
+  modules-download-mode: readonly
+  allow-parallel-runners: false
+  go: '1.18'
+output:
+  format: colored-line-number
+linters:
+  disable:
+    - govet

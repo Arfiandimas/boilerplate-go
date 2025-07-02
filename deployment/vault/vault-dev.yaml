@@ -1,0 +1,62 @@
+service: {{PROJECT_NAME}}
+kaj:
+  dev:
+    {{PROJECT_NAME}}:
+      SERVER_ADDRESS: 0.0.0.0
+      SERVER_PORT: 8081
+      SERVER_TIMEZONE: Asia/Jakarta
+      APP_DEBUG: true
+      APP_NAME: {{PROJECT_NAME}}
+      APP_USERNAME: {{PROJECT_NAME}}
+      APP_ENVIRONMENT: stg
+      APP_DEFAULT_LANG: en
+      DB_HOST: localhost
+      DB_USER: root
+      DB_PORT: 3306
+      DB_NAME: {{PROJECT_NAME}}
+      DB_TIMEOUT: 3
+      DB_MAX_OPEN_CONN: 15
+      DB_MAX_IDLE_CONN: 5
+      DB_MAX_LIFETIME: 3600
+      DB_CHARSET: utf8
+      DB_HOST_READ: localhost
+      DB_USER_READ: root
+      DB_PORT_READ: 3306
+      DB_NAME_READ: {{PROJECT_NAME}}
+      DB_TIMEOUT_READ: 3
+      DB_MAX_OPEN_CONN_READ: 15
+      DB_MAX_IDLE_CONN_READ: 5
+      DB_MAX_LIFETIME_READ: 3600
+      DB_CHARSET_READ: utf8
+      DB_HOST_MIGRATION: localhost
+      DB_USER_MIGRATION: root
+      DB_PORT_MIGRATION: 3306
+      DB_NAME_MIGRATION: {{PROJECT_NAME}}
+      DB_TIMEOUT_MIGRATION: 3
+      DB_MAX_OPEN_CONN_MIGRATION: 15
+      DB_MAX_IDLE_CONN_MIGRATION: 5
+      DB_MAX_LIFETIME_MIGRATION: 3600
+      DB_CHARSET_MIGRATION: utf8
+      AWS_ACCESS_REGION: ap-southeast-1
+      CORS_CONTROL_ALLOW_ORIGIN: localhost
+      REDIS_HOST: localhost:6379
+      REDIS_DB: 0
+      LOGGER_LEVEL: trace
+      OAUTH_URL: http://localhost:8082
+      OAUTH_KEY_PATH: ./tmp/keydata
+      MIXPANEL_TOKEN: MIXPANEL
+      MIXPANEL_SECRET: MIXPANEL
+      APP_PASSWORD: {{PROJECT_NAME}}
+      APP_SECRET_KEY: {{PROJECT_NAME}}
+      DB_PASSWORD: admin
+      DB_PASSWORD_READ: admin
+      DB_PASSWORD_MIGRATION: admin
+      DB_PASSWORD: admin
+      DB_PASSWORD_READ: admin
+      DB_PASSWORD_MIGRATION: admin
+      REDIS_PASSWORD: logger_url
+      AWS_ACCESS_KEY: access_key
+      AWS_ACCESS_SECRET: secret_key
+      LOGGER_URL: logger_url
+      OAUTH_API_KEY: API_KEY
+      OAUTH_API_SECRET: 

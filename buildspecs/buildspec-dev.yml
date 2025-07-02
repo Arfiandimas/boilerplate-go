@@ -1,0 +1,28 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - echo install steps...
+  pre_build:
+    commands:
+      - sh deployment/deployment-dev.sh
+      - echo Logging into AWS ECR...
+      - $(aws ecr get-login --no-include-email --region ap-southeast-1)
+      - REPOSITORY_URI=072739647532.dkr.ecr.ap-southeast-1.amazonaws.com/{{PROJECT_NAME}}
+  build:
+    commands:
+      - echo build Docker image on `date`
+      - echo Building the Docker image...
+      - docker build -t $REPOSITORY_URI  -f deployment/dockerfiles/dockerfile-dev .
+      - docker tag $REPOSITORY_URI $REPOSITORY_URI:$IMAGE_TAG
+  post_build:
+    commands:
+      - echo build Docker image complete `date`
+      - echo push latest Docker images to ECR...
+      - docker push $REPOSITORY_URI:$IMAGE_TAG
+      - echo Writing Image Definitions File...
+      - printf '[{"name":"{{PROJECT_NAME}}","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > {{PROJECT_NAME}}.json
+artifacts:
+  type: zip
+  files:
+    - "**/*"

@@ -1,0 +1,211 @@
+definitions:
+  appctx.Response:
+    properties:
+      data:
+        type: object
+      errors:
+        type: object
+      message:
+        type: object
+      meta:
+        type: object
+      name:
+        type: string
+    type: object
+  presentations.ExampleCreate:
+    properties:
+      address:
+        type: string
+      email:
+        type: string
+      name:
+        type: string
+      phone:
+        type: string
+    required:
+    - address
+    - email
+    - name
+    - phone
+    type: object
+info:
+  contact: {}
+  license: {}
+paths:
+  /ex/v1/example:
+    get:
+      consumes:
+      - application/json
+      description: Example Get list data
+      parameters:
+      - description: "10"
+        in: query
+        name: limit
+        required: true
+        type: string
+      - description: "0"
+        in: query
+        name: page
+        required: true
+        type: string
+      - description: basic xxxxx
+        in: header
+        name: Authorization
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/appctx.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/appctx.Response'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/appctx.Response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/appctx.Response'
+      summary: Example List data
+      tags:
+      - Example
+  /ex/v1/example/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Example Delete data
+      parameters:
+      - description: Example ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: basic xxxxx
+        in: header
+        name: Authorization
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/appctx.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/appctx.Response'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/appctx.Response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/appctx.Response'
+      summary: Example Delete
+      tags:
+      - Example
+    get:
+      consumes:
+      - application/json
+      description: Example Get list data
+      parameters:
+      - description: Example ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: basic xxxxx
+        in: header
+        name: Authorization
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/appctx.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/appctx.Response'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/appctx.Response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/appctx.Response'
+      summary: Example Detail
+      tags:
+      - Example
+  /ex/v1/example/create:
+    post:
+      consumes:
+      - application/json
+      description: Example case for creating APIs
+      parameters:
+      - description: Example Case Payload
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/presentations.ExampleCreate'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/appctx.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/appctx.Response'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/appctx.Response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/appctx.Response'
+      summary: Example Create
+      tags:
+      - Example
+  /in/health:
+    get:
+      consumes:
+      - application/json
+      description: testing Check service health from server environment
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/appctx.Response'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/appctx.Response'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/appctx.Response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/appctx.Response'
+      summary: Health Check Status
+      tags:
+      - Healthcheck
+swagger: "2.0"

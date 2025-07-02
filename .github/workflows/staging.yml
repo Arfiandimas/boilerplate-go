@@ -1,0 +1,60 @@
+name: Running {{PROJECT_NAME}} Service
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: [self-hosted]
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: actions/labeler@v4
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Get Local ENV
+      run: cp /opt/{{PROJECT_NAME}}/.env/dev/local.env .env
+    
+    - name: Build and tag image
+      run: docker build -t "ghcr.io/kiriminaja/{{PROJECT_NAME}}/{{PROJECT_NAME}}:dev" -f deployment/dockerfiles/dockerfile-dev .
+
+    - name: Migrate DB
+      run: docker run -i ghcr.io/kiriminaja/{{PROJECT_NAME}}/{{PROJECT_NAME}}:dev /opt/{{PROJECT_NAME}}/{{PROJECT_NAME}} db:migrate up
+    
+    - name: Docker login
+      run: docker login ghcr.io -u $ACTOR -p $GITHUB_TOKEN
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ACTOR: ${{ github.actor }}
+        
+    - name: Publish to GPR
+      run: docker push ghcr.io/kiriminaja/{{PROJECT_NAME}}/{{PROJECT_NAME}}:dev
+    
+  deploy:
+    runs-on: [self-hosted]
+    needs: build
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/labeler@v4
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Docker login
+      run: docker login ghcr.io -u $ACTOR -p $GITHUB_TOKEN
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ACTOR: ${{ github.actor }}
+    - name: Pulling New Image
+      run: docker-compose -f /opt/kaj-auth-srvc/dev/docker-compose.yml pull
+    - name: Run docker-compose
+      run: docker-compose -f /opt/kaj-auth-srvc/dev/docker-compose.yml stop
+    
+    - name: Run docker-compose
+      run: docker-compose -f /opt/{{PROJECT_NAME}}/dev/docker-compose.yml stop && docker-compose -f /opt/{{PROJECT_NAME}}/dev/docker-compose.yml  up -d
+
+    - name: Clearing Images
+      run: docker rmi $(docker images -f "dangling=true" -q) -f && echo "image berhasil dihapus" || echo "tidak ada yang dibersihkan"
+    
+    - name: Remove Builder Cache
+      run: docker builder prune -f

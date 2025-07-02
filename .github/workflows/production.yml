@@ -1,0 +1,64 @@
+name: {{PROJECT_NAME}} Service Production
+
+on:
+  push:
+    tags:
+      - "**"
+env:
+  GHCR_PATH: "ghcr.io/kiriminaja/{{project_name}} /{{project_name}} "
+  APP_TAG: "prd"
+  APP_NAME: "{{PROJECT_NAME}}"
+
+jobs:
+  build:
+    runs-on: [ubuntu-latest]
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: actions/labeler@v4
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Docker login
+      run: docker login ghcr.io -u $ACTOR -p $GITHUB_TOKEN
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ACTOR: ${{ github.actor }}
+      
+    - id: 'auth'
+      uses: 'google-github-actions/auth@v1'
+      with:
+        credentials_json: '${{ secrets.GCP_PRD_CICD }}'
+
+    - name: Copy Environment from GCS
+      run: gcloud storage cp gs://kaj-prd-environment/$APP_NAME/local.env .env
+    
+    - name: Build and tag image
+      run: docker build --no-cache -t "$GHCR_PATH:$APP_TAG" -f deployment/dockerfiles/dockerfile-prd .
+    
+    - name: Publish to GPR
+      run: docker push $GHCR_PATH:$APP_TAG
+    
+  deploy:
+    runs-on: [self-hosted, kaj-prd-runner]
+    needs: build
+    steps:
+    - uses: actions/labeler@v4
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Docker login
+      run: docker login ghcr.io -u $ACTOR -p $GITHUB_TOKEN
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ACTOR: ${{ github.actor }}
+      
+    - name: Pulling New Image
+      run: docker-compose -f /opt/{{project_name}}/prd/docker-compose.yml pull    
+    
+    - name: Run docker-compose
+      run: docker-compose -f /opt/{{project_name}}/prd/docker-compose.yml stop && docker-compose -f /opt/{{project_name}}/prd/docker-compose.yml  up -d
+
+    - name: Clearing Images
+      run: docker rmi $(docker images -f "dangling=true" -q) -f && echo "image berhasil dihapus" || echo "tidak ada yang dibersihkan"
+    
+    - name: Remove Builder Cache
+      run: docker builder prune -f

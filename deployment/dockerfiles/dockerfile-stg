@@ -1,0 +1,50 @@
+FROM golang:alpine3.19 as builder
+
+ARG GO_BUILD_COMMAND="CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -tags netgo -ldflags '-w' -o {{PROJECT_NAME}} src/main.go"
+
+# Install some build deps + ssh tools for the setup below.
+RUN apk update && apk --no-cache add  build-base  git bash  coreutils openssh  openssl
+
+
+# this command if you get source from bitbucket repos
+# Create the directory where the application will reside
+RUN mkdir -p /go/src/github.com/kiriminaja/{{PROJECT_NAME}}
+
+
+WORKDIR /go/src/github.com/kiriminaja/{{PROJECT_NAME}}
+
+COPY . .
+
+
+# application builder step
+RUN go mod tidy && go mod download && go mod vendor
+RUN eval $GO_BUILD_COMMAND
+
+
+# STEP 2 build a small image
+# Set up the final (deployable/runtime) image.
+FROM public.ecr.aws/docker/library/alpine:3.19
+
+# setup package dependencies
+RUN apk --no-cache update && apk --no-cache  add  ca-certificates bash jq curl
+
+ENV BUILDDIR=/go/src/github.com/kiriminaja/{{PROJECT_NAME}}
+ENV PROJECT_DIR=/opt/{{PROJECT_NAME}}
+
+# Setting timezone
+ENV TZ=Asia/Jakarta
+RUN apk add -U tzdata
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+#create project directory
+RUN mkdir -p $PROJECT_DIR/config
+RUN mkdir -p $PROJECT_DIR/database/migration
+
+WORKDIR $PROJECT_DIR
+
+COPY --from=builder $BUILDDIR/{{PROJECT_NAME}} {{PROJECT_NAME}}
+COPY --from=builder $BUILDDIR/database/migrations $PROJECT_DIR/database/migrations
+COPY --from=builder $BUILDDIR/config/msg.yaml $PROJECT_DIR/config/msg.yaml
+COPY --from=builder $BUILDDIR/.env $PROJECT_DIR/.env
+
+CMD ["sh","-c", "/opt/{{PROJECT_NAME}}/{{PROJECT_NAME}} http serve"]

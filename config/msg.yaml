@@ -1,0 +1,192 @@
+messages:
+  - name: SUCCESS
+    code: 200
+    contents:
+      - lang: id
+        text: Sukses
+      - lang: en
+        text: Success
+
+  - name: CREATED
+    code: 201
+    contents:
+      - lang: id
+        text: Dibuat
+      - lang: en
+        text: Created
+
+  - name: TRANSACTION_FAILED
+    code: 422
+    contents:
+      - lang: id
+        text: Transaksi gagal.
+      - lang: en
+        text: The transaction is failed.
+
+  - name: TRANSACTION_PROCESSING
+    code: 200
+    contents:
+      - lang: id
+        text: Transaksi sedang di proses.
+      - lang: en
+        text: Transaction is processing.
+
+  - name: TRANSACTION_PENDING
+    code: 200
+    contents:
+      - lang: id
+        text: Transaksi sedang di proses.
+      - lang: en
+        text: Transaction pending.
+
+  - name: AUTHENTICATION_FAILURE
+    code: 401
+    contents:
+      - lang: id
+        text: Autentikasi gagal.
+      - lang: en
+        text: Authentication failure.
+
+  - name: UNAUTHORIZED_FAILURE
+    code: 401
+    contents:
+      - lang: id
+        text: Autentikasi token gagal.
+      - lang: en
+        text: Token authentication failure.
+
+  - name: SIGNATURE_FAILURE
+    code: 401
+    contents:
+      - lang: id
+        text: Signature salah.
+      - lang: en
+        text: Signature incorrect.
+
+  - name: INSUFFICIENT_BALANCE
+    code: 422
+    contents:
+      - lang: id
+        text: Saldo tidak mencukupi.
+      - lang: en
+        text: Insufficient balance.
+
+  - name: DATA_NOT_FOUND
+    code: 422
+    contents:
+      - lang: id
+        text: Data tidak ditemukan di sistem.
+      - lang: en
+        text: Data not found in our system.
+
+  - name: VALIDATION_FAILURE
+    code: 400
+    contents:
+      - lang: id
+        text: salah / parameter masukan tidak valid
+      - lang: en
+        text: wrong / invalid input parameter
+
+  - name: UNPROCESSABLE_ENTITY
+    code: 422
+    contents:
+      - lang: id
+        text: Tidak dapat diproses.
+      - lang: en
+        text: The given data cannot to process.
+
+  - name: DUPLICATE_ENTRY
+    code: 409
+    contents:
+      - lang: id
+        text: duplikat data entri
+      - lang: en
+        text: Duplicate entry data.
+
+  - name: REQUEST_TIMEOUT
+    code: 408
+    contents:
+      - lang: id
+        text: Batas ambang waktu permintaan telah habis.
+      - lang: en
+        text: Request timeout.
+
+  - name: ROUTE_FAILURE
+    code: 404
+    contents:
+      - lang: id
+        text: Rute atau metode http tidak ditemukan.
+      - lang: en
+        text: Method or Route not found.
+
+  - name: INTERNAL_FAILURE
+    code: 500
+    contents:
+      - lang: id
+        text: Telah terjadi kesalahan pada sistem.
+      - lang: en
+        text: An internal service error has occurred.
+
+  - name: FORBIDDEN
+    code: 403
+    contents:
+      - lang: id
+        text: Anda tidak di izinkan untuk mengakses sumber ini, Silahkan kontak admin.
+      - lang: en
+        text: You can not access this resource. Please contact the admin!
+
+  - name: INQUIRY_FAILURE
+    code: 422
+    contents:
+      - lang: id
+        text: Gagal inquiry.
+      - lang: en
+        text: Inquiry failed.
+
+  - name: ALREADY_PAID
+    code: 409
+    contents:
+      - lang: id
+        text: Tagihan Sudah lunas.
+      - lang: en
+        text: Already Paid.
+
+  - name: PROVIDER_ERROR
+    code: 500
+    contents:
+      - lang: id
+        text: Vendor bermasalah, silahkan hubungi customer support.
+      - lang: en
+        text: Service Provider something went worng, please contact our customer service.
+
+  - name: UNKNOWN_ERROR
+    code: 500
+    contents:
+      - lang: id
+        text: Terjadi kesalahan pada sistem.
+      - lang: en
+        text: Error unknown.
+
+  - name: CUSTOMER_NOT_FOUND
+    code: 422
+    contents:
+      - lang: id
+        text: ID pelanggan tidak ditemukan
+      - lang: en
+        text: Customer id not found
+
+  - name: PRODUCT_NOT_FOUND
+    code: 422
+    contents:
+      - lang: id
+        text: produk tidak ditemukan
+      - lang: en
+        text: The product not found
+
+  - name: INVALID_CUSTOMER_ID
+    code: 422
+    contents:
+      - lang: id
+        text: id pelanggan yang anda input salah, mohon teliti kembali
+      - lang: en
+        text: The product not found

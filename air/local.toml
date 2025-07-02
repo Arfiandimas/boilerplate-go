@@ -1,0 +1,38 @@
+root = "." 
+watch_dir = "src"
+tmp_dir = "tmp"
+
+[build]
+cmd = "go build -o ./tmp/main src/main.go"
+bin = "tmp/main http serve"
+log = "air_errors.log"
+include_ext = ["go", "tpl", "tmpl", "html"]
+exclude_dir = [
+        "frontend/node_modules",
+        ".git",
+        "database", 
+        "buildspecs", 
+        "dockerfiles", 
+        "mydb", 
+        "tools", 
+        "bin", 
+        "deployment",
+        "elastic", 
+        "docs", 
+        "mocks", 
+        "config",
+        "/src/pkg",
+        "/src/server",
+        "/src/bootstrap"
+    ]
+delay = 1500 # ms
+
+[log]
+time = true
+
+[color]
+main = "magenta"
+watcher = "cyan"
+build = "yellow"
+runner = "green"
+# app = "white"
