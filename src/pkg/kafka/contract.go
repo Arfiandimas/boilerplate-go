@@ -5,8 +5,8 @@ import (
 	"os"
 	"time"
 
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/util"
 	"github.com/Shopify/sarama"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/util"
 )
 
 // Producer represents kafka publisher message topic

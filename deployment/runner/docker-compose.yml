@@ -1,7 +1,7 @@
 version: '3.3'
 services:
     {{PROJECT_NAME}}:
-        image: docker.pkg.github.com/kiriminaja/kaj-rest-engine-go/{{PROJECT_NAME}}:latest
+        image: docker.pkg.github.com/Arfiandimas/kaj-rest-engine-go/{{PROJECT_NAME}}:latest
         restart: always
         expose:
             - "8081"

@@ -3,11 +3,10 @@ package bootstrap
 import (
 	"os"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/oauth"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/oauth"
 )
 
-// RegistryOauthService for kiriminaja oauth
 func RegistryOauthService() oauth.Oauth {
 	apiKey := os.Getenv("OAUTH_API_KEY")
 	apiSecret := os.Getenv("OAUTH_API_SECRET")

@@ -4,8 +4,8 @@ package handler
 import (
 	"net/http"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/appctx"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/ucase/contract"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/appctx"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/ucase/contract"
 )
 
 // HttpRequest handler func wrapper

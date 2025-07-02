@@ -3,9 +3,9 @@ package router
 import (
 	"context"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/repositories"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/ucase/task"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/healthchecks"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/repositories"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/ucase/task"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/healthchecks"
 )
 
 func (rtr *router) TaskRoutes(ctx context.Context) {

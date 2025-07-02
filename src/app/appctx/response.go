@@ -1,7 +1,7 @@
 package appctx
 
 import (
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/msg"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/msg"
 )
 
 // Response structure untuk http usecase

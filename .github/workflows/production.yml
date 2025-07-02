@@ -5,7 +5,7 @@ on:
     tags:
       - "**"
 env:
-  GHCR_PATH: "ghcr.io/kiriminaja/{{project_name}} /{{project_name}} "
+  GHCR_PATH: "ghcr.io/Arfiandimas/{{project_name}} /{{project_name}} "
   APP_TAG: "prd"
   APP_NAME: "{{PROJECT_NAME}}"
 

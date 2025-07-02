@@ -8,7 +8,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/util"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/util"
 )
 
 var msgs map[string]*Message

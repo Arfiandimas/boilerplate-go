@@ -18,10 +18,10 @@ jobs:
       run: cp /opt/{{PROJECT_NAME}}/.env/dev/local.env .env
     
     - name: Build and tag image
-      run: docker build -t "ghcr.io/kiriminaja/{{PROJECT_NAME}}/{{PROJECT_NAME}}:dev" -f deployment/dockerfiles/dockerfile-dev .
+      run: docker build -t "ghcr.io/Arfiandimas/{{PROJECT_NAME}}/{{PROJECT_NAME}}:dev" -f deployment/dockerfiles/dockerfile-dev .
 
     - name: Migrate DB
-      run: docker run -i ghcr.io/kiriminaja/{{PROJECT_NAME}}/{{PROJECT_NAME}}:dev /opt/{{PROJECT_NAME}}/{{PROJECT_NAME}} db:migrate up
+      run: docker run -i ghcr.io/Arfiandimas/{{PROJECT_NAME}}/{{PROJECT_NAME}}:dev /opt/{{PROJECT_NAME}}/{{PROJECT_NAME}} db:migrate up
     
     - name: Docker login
       run: docker login ghcr.io -u $ACTOR -p $GITHUB_TOKEN
@@ -30,7 +30,7 @@ jobs:
         ACTOR: ${{ github.actor }}
         
     - name: Publish to GPR
-      run: docker push ghcr.io/kiriminaja/{{PROJECT_NAME}}/{{PROJECT_NAME}}:dev
+      run: docker push ghcr.io/Arfiandimas/{{PROJECT_NAME}}/{{PROJECT_NAME}}:dev
     
   deploy:
     runs-on: [self-hosted, kaj-dev-runner]

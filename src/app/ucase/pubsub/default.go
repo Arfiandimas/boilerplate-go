@@ -1,8 +1,8 @@
 package pubsub
 
 import (
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/ucase/contract"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/ucase/contract"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
 	pubsubrouter "github.com/sofyan48/pubsub-router"
 )
 

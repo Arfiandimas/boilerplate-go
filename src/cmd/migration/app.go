@@ -7,8 +7,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/database"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/util"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/database"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/util"
 )
 
 func migrateDatabase() {

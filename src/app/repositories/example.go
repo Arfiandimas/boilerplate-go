@@ -4,10 +4,10 @@ import (
 	"context"
 	"database/sql"
 
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/entity"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/database"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/util"
 	"github.com/doug-martin/goqu/v9"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/entity"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/database"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/util"
 )
 
 type example struct {

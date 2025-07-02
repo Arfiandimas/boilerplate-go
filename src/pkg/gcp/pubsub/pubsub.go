@@ -6,8 +6,8 @@ import (
 	"time"
 
 	cpubsub "cloud.google.com/go/pubsub"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/gcp"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/gcp"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
 )
 
 type pubsubGCP struct {

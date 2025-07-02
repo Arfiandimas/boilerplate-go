@@ -1,11 +1,11 @@
 package pubsub
 
 import (
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/appctx"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/presentations"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/ucase/contract"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/consts"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/gcp/pubsub"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/appctx"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/presentations"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/ucase/contract"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/consts"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/gcp/pubsub"
 )
 
 type publisher struct {

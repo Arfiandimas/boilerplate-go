@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/consts"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/consts"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
 )
 
 // ValidateContentType header

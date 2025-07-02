@@ -8,8 +8,8 @@ import (
 	"github.com/gorilla/mux"
 	pubsubrouter "github.com/sofyan48/pubsub-router"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/appctx"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/ucase/contract"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/appctx"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/ucase/contract"
 )
 
 // httpHandlerFunc is a contract http handler for router

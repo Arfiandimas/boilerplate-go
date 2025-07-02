@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/util"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/util"
 )
 
 func castElastic(v interface{}) (*ElasticStructure, error) {

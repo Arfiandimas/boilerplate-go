@@ -7,12 +7,12 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/spf13/cast"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/appctx"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/repositories"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/ucase/contract"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/consts"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/appctx"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/repositories"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/ucase/contract"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/consts"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
 )
 
 type exampleDelete struct {

@@ -12,10 +12,10 @@ import (
 	"github.com/go-sql-driver/mysql"
 	_ "github.com/go-sql-driver/mysql"
 
-	_ "github.com/kiriminaja/kaj-rest-engine-go/database/migrations"
+	_ "github.com/Arfiandimas/kaj-rest-engine-go/database/migrations"
 	_ "github.com/ziutek/mymysql/godrv"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
 )
 
 var (

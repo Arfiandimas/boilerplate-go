@@ -4,10 +4,10 @@ import (
 	"context"
 	"time"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/repositories"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/ucase/contract"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/healthchecks"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/repositories"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/ucase/contract"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/healthchecks"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
 )
 
 type expiredTX struct {

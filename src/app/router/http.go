@@ -6,9 +6,9 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/ucase"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/handler"
-	_ "github.com/kiriminaja/kaj-rest-engine-go/src/swagger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/ucase"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/handler"
+	_ "github.com/Arfiandimas/kaj-rest-engine-go/src/swagger"
 
 	httpSwagger "github.com/swaggo/http-swagger"
 )

@@ -9,7 +9,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/util"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/util"
 )
 
 const (
@@ -116,7 +116,7 @@ func getCaller() *runtime.Frame {
 		minimumCallerDepth = knownLogrusFrames
 	})
 
-	lpkg := `github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger`
+	lpkg := `github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger`
 
 	// Restrict the lookback frames to avoid runaway lookups
 	pcs := make([]uintptr, maximumCallerDepth)

@@ -8,7 +8,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/util"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/util"
 )
 
 type logField map[string]interface{}

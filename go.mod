@@ -1,4 +1,4 @@
-module github.com/kiriminaja/kaj-rest-engine-go
+module github.com/Arfiandimas/kaj-rest-engine-go
 
 go 1.20
 

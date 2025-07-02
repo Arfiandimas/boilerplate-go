@@ -4,8 +4,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/elastic"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/elastic"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
 )
 
 // NewSessionElastic ...

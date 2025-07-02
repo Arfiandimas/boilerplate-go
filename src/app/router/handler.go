@@ -11,17 +11,17 @@ import (
 	"github.com/gorilla/mux"
 	pubsubrouter "github.com/sofyan48/pubsub-router"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/appctx"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/bootstrap"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/consts"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/handler"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/middleware"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/database"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/validates"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/appctx"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/bootstrap"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/consts"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/handler"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/middleware"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/database"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/validates"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/ucase/contract"
-	ucaseContract "github.com/kiriminaja/kaj-rest-engine-go/src/app/ucase/contract"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/ucase/contract"
+	ucaseContract "github.com/Arfiandimas/kaj-rest-engine-go/src/app/ucase/contract"
 )
 
 type router struct {

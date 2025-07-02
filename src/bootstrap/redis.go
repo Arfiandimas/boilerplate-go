@@ -9,7 +9,7 @@ import (
 
 	"github.com/go-redis/redis"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
 )
 
 // RegistryRedisNative initiate redis session

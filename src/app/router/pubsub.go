@@ -1,7 +1,7 @@
 package router
 
 import (
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/ucase/pubsub"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/ucase/pubsub"
 	pubsubrouter "github.com/sofyan48/pubsub-router"
 )
 

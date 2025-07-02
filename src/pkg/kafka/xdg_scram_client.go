@@ -8,7 +8,7 @@ import (
 	"hash"
 	"io/ioutil"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
 	"github.com/xdg/scram"
 )
 

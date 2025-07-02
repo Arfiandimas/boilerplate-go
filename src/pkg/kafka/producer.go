@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
 	"github.com/Shopify/sarama"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
 )
 
 const (

@@ -4,8 +4,8 @@ package logger
 import (
 	"reflect"
 
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/util"
 	"github.com/getsentry/sentry-go"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/util"
 	log "github.com/sirupsen/logrus"
 )
 

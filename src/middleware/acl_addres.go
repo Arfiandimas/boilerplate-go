@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/consts"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/consts"
 )
 
 // IPLocation ...

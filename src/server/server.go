@@ -8,9 +8,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/router"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/bootstrap"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/router"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/bootstrap"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
 	"github.com/rs/cors"
 	pubsubrouter "github.com/sofyan48/pubsub-router"
 )

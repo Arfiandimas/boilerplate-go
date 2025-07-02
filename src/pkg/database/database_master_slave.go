@@ -10,11 +10,11 @@ import (
 	"sync"
 	"time"
 
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/util"
 	"github.com/doug-martin/goqu/v9"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/util"
 	_ "github.com/lib/pq"
 )
 

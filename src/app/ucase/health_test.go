@@ -4,8 +4,8 @@ package ucase
 import (
 	"testing"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/appctx"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/consts"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/appctx"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/consts"
 	"github.com/stretchr/testify/assert"
 )
 

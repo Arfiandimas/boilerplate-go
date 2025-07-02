@@ -4,8 +4,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/kafka"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/util"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/kafka"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/util"
 )
 
 // RegistryKafkaProducer ...

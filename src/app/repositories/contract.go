@@ -5,7 +5,7 @@ import (
 	"context"
 	"database/sql"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/entity"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/entity"
 )
 
 // Contoh penulisan table

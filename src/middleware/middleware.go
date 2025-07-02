@@ -5,11 +5,11 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/consts"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/consts"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/bootstrap"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/util"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/bootstrap"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/util"
 )
 
 // MiddlewareFunc is contract for middleware and must implement this type for http if need middleware http request

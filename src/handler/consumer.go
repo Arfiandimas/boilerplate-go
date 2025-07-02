@@ -7,10 +7,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/appctx"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/ucase/contract"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/kafka"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/appctx"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/ucase/contract"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/kafka"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
 )
 
 func KafkaProcessorHandler(ctx context.Context, consumer kafka.Consumer, producer kafka.Producer, topic []string, groupId string, handler contract.KafkaProcessor) {

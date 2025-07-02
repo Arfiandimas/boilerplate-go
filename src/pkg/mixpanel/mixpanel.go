@@ -4,8 +4,8 @@ import (
 	"os"
 	"time"
 
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
 	mxpanel "github.com/dukex/mixpanel"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
 )
 
 type mixPanel struct {

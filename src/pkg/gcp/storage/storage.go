@@ -8,8 +8,8 @@ import (
 	"os"
 
 	cstore "cloud.google.com/go/storage"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/gcp"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/gcp"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
 )
 
 type stores struct {

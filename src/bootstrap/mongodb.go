@@ -3,9 +3,9 @@ package bootstrap
 import (
 	"os"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/mongodb"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/util"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/mongodb"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/util"
 )
 
 func NewRegisterMongoDB() mongodb.Adapter {

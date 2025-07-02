@@ -3,7 +3,7 @@ package bootstrap
 import (
 	"os"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/mixpanel"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/mixpanel"
 )
 
 // RegistryMixPanel for pkg mixpanel

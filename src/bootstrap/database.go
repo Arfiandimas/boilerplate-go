@@ -4,9 +4,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/database"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/util"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/database"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/util"
 )
 
 // RegistryMariaMasterSlave initialize maria or mysql session

@@ -5,8 +5,8 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/app/appctx"
-	ucase "github.com/kiriminaja/kaj-rest-engine-go/src/app/ucase/contract"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/app/appctx"
+	ucase "github.com/Arfiandimas/kaj-rest-engine-go/src/app/ucase/contract"
 )
 
 // httpHandlerFunc abstraction for http handler

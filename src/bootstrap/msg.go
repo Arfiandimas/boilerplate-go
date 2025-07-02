@@ -2,9 +2,9 @@
 package bootstrap
 
 import (
-	"github.com/kiriminaja/kaj-rest-engine-go/src/consts"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/msg"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/consts"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/msg"
 )
 
 // RegistryMessage setup transformation

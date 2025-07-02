@@ -3,9 +3,9 @@ package bootstrap
 import (
 	"context"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/gcp"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/gcp/pubsub"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/gcp/storage"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/gcp"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/gcp/pubsub"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/gcp/storage"
 )
 
 func GCPClient() gcp.Contract {

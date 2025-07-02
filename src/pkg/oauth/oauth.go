@@ -7,8 +7,8 @@ import (
 	"os"
 	"strings"
 
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/requester"
 	"github.com/dgrijalva/jwt-go"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/requester"
 )
 
 type oauth struct {

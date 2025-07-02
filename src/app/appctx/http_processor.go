@@ -10,7 +10,7 @@ import (
 
 	"github.com/gorilla/schema"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/validates"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/validates"
 )
 
 // Data context untuk http UseCase

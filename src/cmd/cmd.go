@@ -10,9 +10,9 @@ import (
 	"github.com/joho/godotenv"
 	"github.com/spf13/cobra"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/cmd/app"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/cmd/migration"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/cmd/app"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/cmd/migration"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
 )
 
 // Start handler registering service command

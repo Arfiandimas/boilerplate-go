@@ -4,8 +4,8 @@ import (
 	"context"
 	"os"
 
-	"github.com/kiriminaja/kaj-rest-engine-go/src/pkg/logger"
-	"github.com/kiriminaja/kaj-rest-engine-go/src/server"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/pkg/logger"
+	"github.com/Arfiandimas/kaj-rest-engine-go/src/server"
 	"github.com/spf13/cobra"
 )
 
